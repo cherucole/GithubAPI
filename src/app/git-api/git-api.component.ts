@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import {GitApiService} from '../git-api.service';
+
 
 @Component({
   selector: 'app-git-api',
@@ -6,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./git-api.component.css']
 })
 export class GitApiComponent implements OnInit {
-
-  constructor() { }
+users=[];
+  constructor(public gitApiService:GitApiService) {
+this.gitApiService.getUserInfo().subscribe(userObject=>{
+  console.log(userObject);
+});
+   }
 
   ngOnInit() {
   }
