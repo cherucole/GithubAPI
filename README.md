@@ -1,6 +1,6 @@
 # Github Search App
 
-#### 10-Aug-2018
+#### 17-Aug-2018
 #### By **Cherucole**
 
 ## Description

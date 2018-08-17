@@ -30,8 +30,8 @@
             </h5></li>
 
               <li class="list-group-item" *ngIf="users.bio">{{users.bio}}</li>
-              <li class="list-group-item" *ngIf="users.bio"> Works at {{users.company}}</li>
-              <li class="list-group-item" *ngIf="users.bio">Available for hire</li>
+              <li class="list-group-item" *ngIf="users.company"> Works at {{users.company}}</li>
+              <li class="list-group-item" *ngIf="users.hireable">Available for hire</li>
               <!-- <li class="list-group-item" *ngIf="users.followers">Followed by {{users.followers}} Github users</li> -->
               <li class="list-group-item" *ngIf="users.location">Currently lives in {{users.location}}</li>
               <li class="list-group-item" *ngIf="users.email"><a target="_blank" href="emailto:{{users.email}}">{{users.email}}</a></li>
