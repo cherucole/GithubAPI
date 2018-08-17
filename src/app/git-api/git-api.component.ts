@@ -11,8 +11,8 @@ import {GitApiService} from '../git-api.service';
 export class GitApiComponent implements OnInit {
 users=[];
   constructor(public gitApiService:GitApiService) {
-this.gitApiService.getUserInfo().subscribe(userObject=>{
-  console.log(userObject);
+this.gitApiService.getUserInfo().subscribe(userPage=>{
+  console.log(userPage);
 });
    }
 
