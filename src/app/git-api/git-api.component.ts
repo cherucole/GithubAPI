@@ -10,6 +10,8 @@ import {GitApiService} from '../git-api.service';
 })
 export class GitApiComponent implements OnInit {
 users :any[];
+repositories: any[];
+
   constructor(public gitApiService:GitApiService) {
 this.gitApiService.getUserInfo().subscribe(userPage=>{
   console.log(userPage);

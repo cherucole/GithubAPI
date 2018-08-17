@@ -1,21 +1,19 @@
 <div  class="container" *ngIf="users">
   <div class="card">
-    <div class="card-header">
-      {{users.name}}
-<small>({{users.login}})</small>
-    </div>
-    <div class="row">
+    <div class="card-header display-4"  style="text-align:center; color:#0d47a1">{{users.name}} <small>({{users.login}})</small></div>
 
+    <!-- <div class="card-header display-2" style="text-align:center; color:#0d47a1">
+      <h2 >{{users.name}} <small>({{users.login}})</small></h2>
+    </div> -->
+    <div class="row">
     <div class="card-body">
       <div class="row">
         <div class="col-sm-1">
-
         </div>
         <div class="col-sm-4">
           <img src="{{users.avatar_url}}" width="460" height="345" class="rounded-circle img-fluid">
         </div>
         <div class="col-sm-2">
-
         </div>
         <div class="col-sm-5">
           <ul class="list-group">
@@ -24,7 +22,6 @@
               <span class="badge badge-primary" style="margin:6px;">Follows: {{users.followers}}</span>
               <!-- <span class="badge badge-success">{{users.public_gists}} Public gists</span> -->
               <span class="badge badge-success" style="margin:6px;">{{users.public_repos}} Public Repos</span>
-
             </h5></li>
 
             <li class="list-group-item" *ngIf="users.bio">{{users.bio}}</li>
@@ -34,27 +31,20 @@
             <li class="list-group-item" *ngIf="users.location">Currently lives in {{users.location}}</li>
             <li class="list-group-item" *ngIf="users.email"><a target="_blank" href="emailto:{{users.email}}">{{users.email}}</a></li>
             <li class="list-group-item badge"  *ngIf="users.html_url"><a target="_blank" href="{{users.html_url}}">View profile on Github</a></li>
-            <!-- <li><span class="badge badge-primary" style="margin:6px;"><a href="{{users.html_url}}">View on Github</a></span>
-</li> -->
-
-
           </ul>
         </div>
-        <!-- <div class="sm-4">
-          <div>
-            <p>
-              <span class="badge badge-primary">{{users.followers}} Followers</span>
-              <span class="badge badge-primary">Follows: {{users.followers}}</span>
-              <span class="badge badge-success">{{users.public_gists}} Public gists</span>
-              <span class="badge badge-success">{{users.public_repos}} Public Repos</span>
-
-            </p>
-          </div>
-        </div> -->
       </div>
     </div>
-
   </div>
-
 </div>
+<br>
+<div class="card">
+  <div class="card-header display-4"  style="text-align:center; color:#0d47a1">{{users.login}}'s repositories</div>
+  <div class="card-body" *ngFor="let repository of repositories">
+    <p></p>
+  </div>
+</div>
+
+
+
 </div>

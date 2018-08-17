@@ -19,4 +19,9 @@ this.userName='cherucole';
   getUserInfo(){
     return this.http.get("https://api.github.com/users/" + this.userName + "?access_token=" + this.apiKey)
   }
+getUserRepos(){
+  return this.http.get("https://api.github.com/users/" + this.userName + "/repos?access_token=" + this.apiKey)
+
+}
+
 }
