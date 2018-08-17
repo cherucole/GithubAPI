@@ -17,9 +17,11 @@ this.gitApiService.getUserInfo().subscribe(userPage=>{
   console.log(userPage);
   this.users=userPage;
 });
-this.gitApiService.getUserRepos().subscribe(repos=>{
-  console.log(repos);
-  this.repositories=repos;
+this.gitApiService.getUserRepos().subscribe(repositories=>{
+  console.log(repositories);
+  this.repositories=repositories;
+
+
 });
    }
 
