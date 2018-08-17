@@ -14,6 +14,14 @@
         </div>
         <div class="col-sm-5">
           <ul class="list-group">
+            <li class="list-group-item" ><h5>
+              <span class="badge badge-primary" style="margin:6px;" >{{users.followers}} Followers</span>
+              <span class="badge badge-primary" style="margin:6px;">Follows: {{users.followers}}</span>
+              <!-- <span class="badge badge-success">{{users.public_gists}} Public gists</span> -->
+              <span class="badge badge-success" style="margin:6px;">{{users.public_repos}} Public Repos</span>
+
+            </h5></li>
+
             <li class="list-group-item" *ngIf="users.bio">{{users.bio}}</li>
             <li class="list-group-item" *ngIf="users.bio"> Works at {{users.company}}</li>
             <li class="list-group-item" *ngIf="users.bio">Available for hire</li>
@@ -24,6 +32,17 @@
 
           </ul>
         </div>
+        <!-- <div class="sm-4">
+          <div>
+            <p>
+              <span class="badge badge-primary">{{users.followers}} Followers</span>
+              <span class="badge badge-primary">Follows: {{users.followers}}</span>
+              <span class="badge badge-success">{{users.public_gists}} Public gists</span>
+              <span class="badge badge-success">{{users.public_repos}} Public Repos</span>
+
+            </p>
+          </div>
+        </div> -->
       </div>
     </div>
 
