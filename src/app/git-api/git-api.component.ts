@@ -9,10 +9,11 @@ import {GitApiService} from '../git-api.service';
   styleUrls: ['./git-api.component.css']
 })
 export class GitApiComponent implements OnInit {
-users=[];
+users :any[];
   constructor(public gitApiService:GitApiService) {
 this.gitApiService.getUserInfo().subscribe(userPage=>{
   console.log(userPage);
+  this.users=userPage;
 });
    }
 
