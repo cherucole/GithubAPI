@@ -8,9 +8,9 @@ describe('GitApiComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GitApiComponent ]
+      declarations: [GitApiComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
