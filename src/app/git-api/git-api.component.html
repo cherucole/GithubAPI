@@ -1,6 +1,6 @@
 <div *ngIf="users">
   <div class="panel panel-default">
-    <div class="panel-heading">
+    <div class="card-header">
       {{users.name}}
 <br>
 <small>{{users.login}}</small>
@@ -12,7 +12,7 @@
         <div class="col-sm-3">
           <img src="{{users.avatar_url}}" width="460" height="345" class="rounded-circle img-fluid">
         </div>
-        <div class="col-sm-5">
+        <div class="col-sm-4">
           <ul class="list-group">
             <li class="list-group-item" ><h5>
               <span class="badge badge-primary" style="margin:6px;" >{{users.followers}} Followers</span>
@@ -25,9 +25,12 @@
             <li class="list-group-item" *ngIf="users.bio">{{users.bio}}</li>
             <li class="list-group-item" *ngIf="users.bio"> Works at {{users.company}}</li>
             <li class="list-group-item" *ngIf="users.bio">Available for hire</li>
-            <li class="list-group-item" *ngIf="users.followers">Followed by {{users.followers}} Github users</li>
+            <!-- <li class="list-group-item" *ngIf="users.followers">Followed by {{users.followers}} Github users</li> -->
             <li class="list-group-item" *ngIf="users.location">Currently lives in {{users.location}}</li>
             <li class="list-group-item" *ngIf="users.email"><a target="_blank" href="emailto:{{users.email}}">{{users.email}}</a></li>
+            <li class="list-group-item badge"  *ngIf="users.html_url"><a target="_blank" href="{{users.html_url}}">View profile on Github</a></li>
+            <!-- <li><span class="badge badge-primary" style="margin:6px;"><a href="{{users.html_url}}">View on Github</a></span>
+</li> -->
 
 
           </ul>
