@@ -1,18 +1,23 @@
-<div *ngIf="users">
-  <div class="panel panel-default">
+<div  class="container" *ngIf="users">
+  <div class="card">
     <div class="card-header">
       {{users.name}}
-<br>
-<small>{{users.login}}</small>
-<br>
+<small>({{users.login}})</small>
     </div>
+    <div class="row">
 
-    <div class="panel-body">
+    <div class="card-body">
       <div class="row">
-        <div class="col-sm-3">
-          <img src="{{users.avatar_url}}" width="460" height="345" class="rounded-circle img-fluid">
+        <div class="col-sm-1">
+
         </div>
         <div class="col-sm-4">
+          <img src="{{users.avatar_url}}" width="460" height="345" class="rounded-circle img-fluid">
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5">
           <ul class="list-group">
             <li class="list-group-item" ><h5>
               <span class="badge badge-primary" style="margin:6px;" >{{users.followers}} Followers</span>
@@ -51,4 +56,5 @@
 
   </div>
 
+</div>
 </div>
