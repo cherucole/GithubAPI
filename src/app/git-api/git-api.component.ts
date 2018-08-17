@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GitApiService } from '../git-api.service';
+import {users} from '../username'
+import {repositories} from '../repositories'
 
 
 @Component({

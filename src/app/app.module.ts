@@ -7,11 +7,17 @@ import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { GitApiComponent } from './git-api/git-api.component';
 import { GitApiService } from './git-api.service';
+import { TimeEllapsedPipe } from './time-ellapsed.pipe';
+// import { StrikethroughDirective } from './strikethrough.directive';
+import { UnderlineDirective } from './underline.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GitApiComponent
+    GitApiComponent,
+    TimeEllapsedPipe,
+    // StrikethroughDirective,
+    UnderlineDirective
   ],
   imports: [
     BrowserModule,
