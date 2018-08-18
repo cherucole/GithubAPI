@@ -11,8 +11,8 @@ import { repositories } from '../repositories'
   styleUrls: ['./git-api.component.css']
 })
 export class GitApiComponent implements OnInit {
-  users: any[];
-  repositories: any[];
+  users;
+  repositories;
   userName: string;
 
   constructor(public gitApiService: GitApiService) {
