@@ -3,15 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { GitApiService } from '../git-api.service';
 import { Users } from '../username'
 import { repositories } from '../repositories'
-import {Router} from '@angular/router'
-
 
 @Component({
-  selector: 'app-git-api',
-  templateUrl: './git-api.component.html',
-  styleUrls: ['./git-api.component.css']
+  selector: 'app-repositories',
+  templateUrl: './repositories.component.html',
+  styleUrls: ['./repositories.component.css']
 })
-export class GitApiComponent implements OnInit {
+export class RepositoriesComponent implements OnInit {
   users;
   repositories;
   userName: string;
