@@ -33,7 +33,7 @@
               <li appUnderline class="list-group-item" *ngIf="users.bio">{{users.bio}}</li>
               <li class="list-group-item" *ngIf="users.company"> Works at {{users.company}}</li>
               <li class="list-group-item" *ngIf="users.hireable">Available for hire</li>
-              <li class="list-group-item" *ngIf="users.location">Currently lives in {{users.location}}</li>
+              <li class="list-group-item" *ngIf="users.created_at">Joined on: {{users.created_at|date:short:timezone}}</li>
               <li class="list-group-item" *ngIf="users.email"><a target="_blank" href="emailto:{{users.email}}">{{users.email}}</a></li>
               <li class="list-group-item badge" *ngIf="users.html_url"><a target="_blank" href="{{users.html_url}}">View profile on Github</a></li>
 
