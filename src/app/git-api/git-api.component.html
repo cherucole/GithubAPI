@@ -1,7 +1,8 @@
 <div class="container">
   <form action="" class="search-form">
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search Username" [(ngModel)]="userName" name="userName" (keyup)="findUser()">
+      <input type="text" class="form-control" placeholder="Search Username" [(ngModel)]="userName" name="userName"
+        (keyup)="findUser()">
     </div>
   </form>
 </div>
@@ -24,17 +25,19 @@
             <ul class="list-group">
               <li class="list-group-item">
                 <h5>
-              <span class="badge badge-primary" style="margin:6px;" >{{users.followers}} Followers</span>
-              <span class="badge badge-primary" style="margin:6px;">Follows: {{users.followers}}</span>
-              <span class="badge badge-success" style="margin:6px;">{{users.public_repos}} Public Repos</span>
-            </h5></li>
+                  <span class="badge badge-primary" style="margin:6px;">{{users.followers}} Followers</span>
+                  <span class="badge badge-primary" style="margin:6px;">Follows: {{users.followers}}</span>
+                  <span class="badge badge-success" style="margin:6px;">{{users.public_repos}} Public Repos</span>
+                </h5>
+              </li>
 
               <li appUnderline class="list-group-item" *ngIf="users.bio">{{users.bio}}</li>
               <li class="list-group-item" *ngIf="users.company"> Works at {{users.company}}</li>
               <li class="list-group-item" *ngIf="users.hireable">Available for hire</li>
               <li class="list-group-item" *ngIf="users.created_at">Joined on: {{users.created_at|date:short:timezone}}</li>
               <li class="list-group-item" *ngIf="users.email"><a target="_blank" href="emailto:{{users.email}}">{{users.email}}</a></li>
-              <li class="list-group-item badge" *ngIf="users.html_url"><a target="_blank" href="{{users.html_url}}">View profile on Github</a></li>
+              <li class="list-group-item badge" *ngIf="users.html_url"><a target="_blank" href="{{users.html_url}}">View
+                  profile on Github</a></li>
 
             </ul>
           </div>
